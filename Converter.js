@@ -1,8 +1,16 @@
 $(document).ready(function() {
     
     //Home
+    $('#back').hide();
     $('.home').on('click', function() {
         $('.home').hide();
+        $('#back').show();
+    });
+    $('#back').on('click', function() {
+        $('.temperature1').hide();
+        $('.temperature2').hide();
+        $('.home').show();
+        $('#back').hide();
     });
     
     //Button changes color when hovered over
