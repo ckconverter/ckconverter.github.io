@@ -1,5 +1,14 @@
 $(document).ready(function() {
     
+    //Hiding and showing things
+    $('.temperature').hide();
+    $('.home').on('click', function() {
+        $('.home').hide();
+    });
+    $('#toTemp').on('click', function() {
+        $('.temperature').show();
+    });
+    
     //Button changes color when hovered over
     $('li').mouseenter(function() {
         $(this).fadeTo('fast', 1);
@@ -9,6 +18,8 @@ $(document).ready(function() {
     });
     
     //What happens when buttons are clicked on
+    
+    //Temperature
     $('#FtC').on('click', function() {
         var n = prompt('Enter degrees in Fahrenheit');
         if (isNaN(n)) {
