@@ -1,12 +1,8 @@
 $(document).ready(function() {
     
-    //Hiding and showing things
-    $('.temperature').hide();
+    //Home
     $('.home').on('click', function() {
         $('.home').hide();
-    });
-    $('#toTemp').on('click', function() {
-        $('.temperature').show();
     });
     
     //Button changes color when hovered over
@@ -17,71 +13,97 @@ $(document).ready(function() {
         $(this).fadeTo('fast', 0.75);
     });
     
-    //What happens when buttons are clicked on
-    
     //Temperature
-    $('#FtC').on('click', function() {
-        var n = prompt('Enter degrees in Fahrenheit');
-        if (isNaN(n)) {
-            alert('Please use numbers');
-        } else if (n < -459.67) {
-            alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
-        } else if (n >= -459.67) {
-            alert(String(Math.round((n - 32) / 1.8)) + ' degrees Celsius');
-        } else {
-            alert('Error');
-        }
+    $('.temperature1').hide();
+    $('.temperature2').hide();
+    $('#toTemp').on('click', function() {
+        $('.temperature1').show();
     });
-    $('#FtK').on('click', function() {
-        var n = prompt('Enter degrees in Fahrenheit');
-        if (isNaN(n)) {
-            alert('Please use numbers');
-        } else if (n < -459.67) {
-            alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
-        } else if (n >= -459.67) {
-            alert(String(Math.round((n - 32) / 1.8 + 273.15)) + ' degrees Kelvin');
-        } else {
-            alert('Error');
-        }
+    
+    //Fahrenheit
+    $('#F1').on('click', function() {
+        $('.temperature1').hide();
+        alert('What would you like to convert to?');
+        $('.temperature2').show();
+        $('#F2').hide();
+        $('#C2').on('click', function() {
+            var n = prompt('Enter degrees in Fahrenheit');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < -459.67) {
+                alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
+            } else if (n >= -459.67) {
+                alert(String(Math.round((n - 32) / 1.8)) + ' degrees Celsius');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#K2').on('click', function() {
+            var n = prompt('Enter degrees in Fahrenheit');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < -459.67) {
+                alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
+            } else if (n >= -459.67) {
+                alert(String(Math.round((n - 32) / 1.8 + 273.15)) + ' degrees Kelvin');
+            } else {
+                alert('Error');
+            }
+        });
     });
-    $('#CtF').on('click', function() {
-        var n = prompt('Enter degrees in Celsius');
-        if (isNaN(n)) {
-            alert('Please use numbers');
-        } else if (n < -273.15) {
-            alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
-        } else if (n >= -273.15) {
-            alert(String(Math.round(n * 1.8 + 32)) + ' degrees Fahrenheit');
-        } else {
-            alert('Error');
-        }
+    
+    //Celsius
+    $('#C1').on('click', function() {
+        $('.temperature1').hide();
+        alert('What would you like to convert to?');
+        $('.temperature2').show();
+        $('#C2').hide();
+        $('#F2').on('click', function() {
+            var n = prompt('Enter degrees in Celsius');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < -273.15) {
+                alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
+            } else if (n >= -273.15) {
+                alert(String(Math.round(n * 1.8 + 32)) + ' degrees Fahrenheit');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#K2').on('click', function() {
+            var n = prompt('Enter degrees in Celsius');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < -273.15) {
+                alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
+            } else if (n >= -273.15) {
+                alert(String(Math.round(n + 273.15)) + ' degrees Kelvin');
+            } else {
+                alert('Error');
+            }
+        });
     });
-    $('#CtK').on('click', function() {
-        var n = prompt('Enter degrees in Celsius');
-        if (isNaN(n)) {
-            alert('Please use numbers');
-        } else if (n < -273.15) {
-            alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
-        } else if (n >= -273.15) {
-            alert(String(Math.round(n + 273.15)) + ' degrees Kelvin');
-        } else {
-            alert('Error');
-        }
-    });
-    $('#KtF').on('click', function() {
-        var n = prompt('Enter degrees in Kelvin');
-        if (isNaN(n)) {
-            alert('Please use numbers');
-        } else if (n < 0) {
-            alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
-        } else if (n >= 0) {
-            alert(String(Math.round((n - 273.15) * 1.8 + 32)) + ' degrees Fahrenheit');
-        } else {
-            alert('Error');
-        }
-    });
-    $('#KtC').on('click', function() {
-        var n = prompt('Enter degrees in Kelvin');
+    
+    //Kelvin
+    $('#K1').on('click', function() {
+        $('.temperature1').hide();
+        alert('What would you like to convert to?');
+        $('.temperature2').show();
+        $('#K2').hide();
+        $('#F2').on('click', function() {
+            var n = prompt('Enter degrees in Kelvin');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is below absolute zero, and therefore does not exist based on our current understanding of physics');
+            } else if (n >= 0) {
+                alert(String(Math.round((n - 273.15) * 1.8 + 32)) + ' degrees Fahrenheit');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#C2').on('click', function() {
+            var n = prompt('Enter degrees in Kelvin');
         if (isNaN(n)) {
             alert('Please use numbers');
         } else if (n < 0) {
@@ -91,5 +113,6 @@ $(document).ready(function() {
         } else {
             alert('Error');
         }
+        });
     });
 });
