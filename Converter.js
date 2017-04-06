@@ -215,7 +215,7 @@ $(document).ready(function() {
     });
 	
     //Centimeters
-    $('#M1').on('click', function() {
+    $('#Cm1').on('click', function() {
         $('.distance1').hide();
         $('.distance2').show();
         $('#Cm2').hide();
