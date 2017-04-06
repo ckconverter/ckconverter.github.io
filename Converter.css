@@ -21,3 +21,8 @@ li {
     padding: 10px 25px;
     opacity: 0.75;
 }
+
+h2 {
+    font-family: Roboto Condensed;
+    margin: 10px 75px;
+}
