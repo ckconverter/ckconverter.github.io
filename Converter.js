@@ -129,18 +129,18 @@ $(document).ready(function() {
         });
     });
 	
-	//Distance
-	$('.distance').hide();
-	$('#toDistance').on('click', function() {
-	    $('.distance1').show();
-	});
-	
-	//Meters
-	$('#M1').on('click', function() {
-	$('.distance1').hide();
-	$('.distance2').show();
-	$('#M2').hide();
-	$('#Cm2').on('click', function() {
+    //Distance
+    $('.distance').hide();
+    $('#toDistance').on('click', function() {
+        $('.distance1').show();
+    });
+    	
+    //Meters
+    $('#M1').on('click', function() {
+        $('.distance1').hide();
+        $('.distance2').show();
+        $('#M2').hide();
+        $('#Cm2').on('click', function() {
             var n = prompt('Enter length in Meters');
             if (isNaN(n)) {
                 alert('Please use numbers');
@@ -152,7 +152,7 @@ $(document).ready(function() {
                 alert('Error');
             }
         });
-	$('#Km2').on('click', function() {
+        $('#Km2').on('click', function() {
             var n = prompt('Enter length in Meters');
             if (isNaN(n)) {
                 alert('Please use numbers');
@@ -164,7 +164,7 @@ $(document).ready(function() {
                 alert('Error');
             }
         });
-	$('#Ft2').on('click', function() {
+        $('#Ft2').on('click', function() {
             var n = prompt('Enter length in Meters');
             if (isNaN(n)) {
                 alert('Please use numbers');
