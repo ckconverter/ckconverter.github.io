@@ -1,16 +1,25 @@
 $(document).ready(function() {
     
-    //Home
+    //Generic
     $('#back').hide();
+    $('#fromHeading').hide();
+    $('#toHeading').hide();
     $('.home').on('click', function() {
         $('.home').hide();
         $('#back').show();
+        $('#fromHeading').show();
     });
     $('#back').on('click', function() {
         $('.temperature1').hide();
         $('.temperature2').hide();
         $('.home').show();
         $('#back').hide();
+        $('#fromHeading').hide();
+        $('#toHeading').hide();
+    });
+    $('.primary').on('click', function() {
+        $('#fromHeading').hide();
+        $('#toHeading').show();
     });
     
     //Button changes color when hovered over
@@ -31,7 +40,6 @@ $(document).ready(function() {
     //Fahrenheit
     $('#F1').on('click', function() {
         $('.temperature1').hide();
-        alert('What would you like to convert to?');
         $('.temperature2').show();
         $('#F2').hide();
         $('#C2').on('click', function() {
@@ -63,7 +71,6 @@ $(document).ready(function() {
     //Celsius
     $('#C1').on('click', function() {
         $('.temperature1').hide();
-        alert('What would you like to convert to?');
         $('.temperature2').show();
         $('#C2').hide();
         $('#F2').on('click', function() {
@@ -95,7 +102,6 @@ $(document).ready(function() {
     //Kelvin
     $('#K1').on('click', function() {
         $('.temperature1').hide();
-        alert('What would you like to convert to?');
         $('.temperature2').show();
         $('#K2').hide();
         $('#F2').on('click', function() {
