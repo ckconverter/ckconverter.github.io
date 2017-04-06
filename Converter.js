@@ -213,4 +213,83 @@ $(document).ready(function() {
             }
         });
     });
+	
+    //Centimeters
+    $('#M1').on('click', function() {
+        $('.distance1').hide();
+        $('.distance2').show();
+        $('#Cm2').hide();
+        $('#M2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 100) + ' Centimeters');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#Km2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 100000) + ' Kilometers');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#Ft2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String((n / .3048) / 100) + ' Feet');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#In2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(((n / .3048) * 12) / 100) + ' Inches');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#Yd2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(((n / .3048) / 3) / 100) + ' Yards');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#Mi2').on('click', function() {
+            var n = prompt('Enter length in Centimeters');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative length, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(((n / .3048) / 5280) / 100) + ' Miles');
+            } else {
+                alert('Error');
+            }
+        });
+    });
 });
