@@ -23,10 +23,10 @@ $(document).ready(function() {
     });
     
     //Button changes color when hovered over
-    $('li').mouseenter(function() {
+    $('button').mouseenter(function() {
         $(this).fadeTo('fast', 1);
     });
-    $('li').mouseleave(function() {
+    $('button').mouseleave(function() {
         $(this).fadeTo('fast', 0.75);
     });
     
