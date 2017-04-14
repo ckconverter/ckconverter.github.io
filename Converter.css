@@ -11,26 +11,23 @@ h1 {
     text-align: center;
 }
 
-li {
+button {
     font-family: 'Roboto Condensed', 'sans-serif';
-    margin: 25px 42%;
+    margin: 1% 46%;
     background-color: #6600cc;
     color: white;
     width: 100px;
     text-align: center;
-    padding: 10px 30px;
+    padding: 1% 2%;
     opacity: 0.75;
 }
 
 h2 {
     font-family: Roboto Condensed;
-    margin: 0 48%;
+    margin: 0 44%;
+    width: 100%
 }
 
 #backli {
 	background-color: #ff9900;
-}
-
-ul li {
-    list-style-type: none;
 }
