@@ -693,4 +693,279 @@ $(document).ready(function() {
     $('#toPressure').on('click', function() {
         $('.pressure1').show();
     });
+    
+    //Atmospheres
+    $('#atm1').on('click', function() {
+        $('.pressure1').hide();
+        $('.pressure2').show();
+        $('#atm2').hide();
+        $('#Pa2').on('click', function() {
+            var n = prompt('Enter pressure in atmoshperes');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101325) + ' Pascals');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#kPa2').on('click', function() {
+            var n = prompt('Enter pressure in atmoshperes');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101.325) + ' Kilopascals');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#torr2').on('click', function() {
+            var n = prompt('Enter pressure in atmoshperes');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 760) + ' Torr/mmHg');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#PSI2').on('click', function() {
+            var n = prompt('Enter pressure in atmoshperes');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 14.7) + ' PSI');
+            } else {
+                alert('Error');
+            }
+        });
+    });
+	
+    //Pascals
+    $('#Pa1').on('click', function() {
+        $('.pressure1').hide();
+        $('.pressure2').show();
+        $('#Pa2').hide();
+        $('#atm2').on('click', function() {
+            var n = prompt('Enter pressure in Pascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 101325) + ' atmospheres');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#kPa2').on('click', function() {
+            var n = prompt('Enter pressure in Pascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 1000) + ' Kilopascals');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#torr2').on('click', function() {
+            var n = prompt('Enter pressure in Pascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 760 / 101325) + ' Torr/mmHg');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#PSI2').on('click', function() {
+            var n = prompt('Enter pressure in Pascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 14.7 / 101325) + ' PSI');
+            } else {
+                alert('Error');
+            }
+        });
+    });
+	
+    //Kilopascals
+    $('#kPa1').on('click', function() {
+        $('.pressure1').hide();
+        $('.pressure2').show();
+        $('#kPa2').hide();
+        $('#Pa2').on('click', function() {
+            var n = prompt('Enter pressure in Kilopascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 1000) + ' Pascals');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#atm2').on('click', function() {
+            var n = prompt('Enter pressure in Kilopascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 101.325) + ' Atmospheres');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#torr2').on('click', function() {
+            var n = prompt('Enter pressure in Kilopascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 760 / 101.325) + ' Torr/mmHg');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#PSI2').on('click', function() {
+            var n = prompt('Enter pressure in Kilopascals');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 14.7 / 101.325) + ' PSI');
+            } else {
+                alert('Error');
+            }
+        });
+    });
+	
+    //Torr
+    $('#torr1').on('click', function() {
+        $('.pressure1').hide();
+        $('.pressure2').show();
+        $('#torr2').hide();
+        $('#Pa2').on('click', function() {
+            var n = prompt('Enter pressure in Torr/mmHg');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101325 / 760) + ' Pascals');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#kPa2').on('click', function() {
+            var n = prompt('Enter pressure in Torr/mmHg');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101.325 / 760) + ' Kilopascals');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#atm2').on('click', function() {
+            var n = prompt('Enter pressure in Torr/mmHg');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 760) + ' atmospheres');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#PSI2').on('click', function() {
+            var n = prompt('Enter pressure in Torr/mmHg');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 14.7 / 760) + ' PSI');
+            } else {
+                alert('Error');
+            }
+        });
+    });
+	
+   //PSI
+    $('#PSI1').on('click', function() {
+        $('.pressure1').hide();
+        $('.pressure2').show();
+        $('#PSI2').hide();
+        $('#Pa2').on('click', function() {
+            var n = prompt('Enter pressure in PSI');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101325 / 14.7) + ' Pascals');
+            } else {
+                alert('Error');
+            }
+        });
+        $('#kPa2').on('click', function() {
+            var n = prompt('Enter pressure in PSI');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 101.325 / 14.7) + ' Kilopascals');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#torr2').on('click', function() {
+            var n = prompt('Enter pressure in PSI');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n * 760 / 14.7) + ' Torr/mmHg');
+            } else {
+                alert('Error');
+            }
+        });
+	$('#atm2').on('click', function() {
+            var n = prompt('Enter pressure in PSI');
+            if (isNaN(n)) {
+                alert('Please use numbers');
+            } else if (n < 0) {
+                alert('The number you want to convert is a negative pressure, which isn\'t possible. Please try again.');
+            } else if (n >= 0) {
+                alert(String(n / 14.7) + ' atmospheres');
+            } else {
+                alert('Error');
+            }
+        });
+    });
 });
