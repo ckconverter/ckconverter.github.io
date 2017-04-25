@@ -687,4 +687,10 @@ $(document).ready(function() {
             }
         });
     });
+    
+    //Pressure
+    $('.pressure').hide();
+    $('#toPressure').on('click', function() {
+        $('.pressure1').show();
+    });
 });
