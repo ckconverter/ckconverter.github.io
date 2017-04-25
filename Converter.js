@@ -12,6 +12,7 @@ $(document).ready(function() {
     $('#back').on('click', function() {
         $('.temperature').hide();
         $('.distance').hide();
+	$('.pressure').hide();
         $('.home').show();
         $('#back').hide();
         $('#fromHeading').hide();
