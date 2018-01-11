@@ -1,1 +1,3 @@
 function clickOn(clickOnThing) {
+	$(clickOnThing)
+}
