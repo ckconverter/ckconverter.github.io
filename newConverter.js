@@ -1,3 +1,5 @@
-function clickOn(clickOnThing) {
-	$(clickOnThing)
+function clickOn(clickOnThing,clickCode) {
+	$(clickOnThing).on('click', function() {
+		clickCode
+	});
 }
